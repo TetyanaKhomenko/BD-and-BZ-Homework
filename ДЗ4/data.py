@@ -19,6 +19,3 @@ for k,v in normal_forms.items():
     normal_forms[k] = (v, [inf[0] for inf in morph.parse (k)[0].lexeme])
 
 print(normal_forms)
-# print(words)
-# for k,v in words.items():
-#     print(k,'—',v)
