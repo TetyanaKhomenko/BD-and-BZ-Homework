@@ -12,10 +12,8 @@ for token in doc:
     if re.match(r"[А-ЩЬЮЯҐЄІЇа-щьюяґєії'`’ʼ]", token.text):
         normal_forms[token.lemma_]=token.pos_
 
-
-
 morph = pymorphy2.MorphAnalyzer(lang='uk')
 for k,v in normal_forms.items():
     normal_forms[k] = (v, [inf[0] for inf in morph.parse (k)[0].lexeme])
 
-print(normal_forms)
+
